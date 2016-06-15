@@ -9,6 +9,10 @@
     <artifactId>client</artifactId>
     <packaging>war</packaging>
 
+    <properties>
+        <client.port>8080</client.port>
+    </properties>
+
     <dependencies>
         <!-- SPRING -->
         <dependency>
@@ -61,11 +65,33 @@
             <groupId>com.we.sew.site</groupId>
             <artifactId>core</artifactId>
             <version>0</version>
-            <scope>provided</scope>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
     <build>
         <finalName>WeSeW Site</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.11.v20150529</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webApp>
+                        <contextPath>/</contextPath>
+                    </webApp>
+                    <httpConnector>
+                        <port>${client.port}</port>
+                    </httpConnector>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

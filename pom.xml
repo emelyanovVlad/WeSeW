@@ -20,6 +20,8 @@
         <spring.sec.ver>4.0.4.RELEASE</spring.sec.ver>
         <cxf.ver>3.1.6</cxf.ver>
         <java.ver>1.8</java.ver>
+        <db.user.name>root</db.user.name>
+        <db.user.pass>root</db.user.pass>
     </properties>
 
     <dependencyManagement>
@@ -158,6 +160,14 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>sql-maven-plugin</artifactId>
+            <version>1.5</version>
+        </dependency>
+    </dependencies>
+
 
     <build>
         <pluginManagement>
@@ -191,5 +201,29 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <profiles>
+        <profile>
+            <id>create db</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>sql-maven-plugin</artifactId>
+                        <version>1.5</version>
+                        <configuration>
+                            <driver>com.mysql.jdbc.Driver</driver>
+                            <url>jdbc:mysql://localhost:3306/wesew</url>
+                            <username>${db.user.name}</username>
+                            <password>${db.user.pass}</password>
+                            <srcFiles>
+                                <srcFile>first_start.sql</srcFile>
+                            </srcFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>

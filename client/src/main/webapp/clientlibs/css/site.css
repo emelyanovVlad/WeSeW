@@ -1,0 +1,131 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+fieldset {
+    border:0;
+}
+
+.header {
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background-color: rgba(255, 255, 255, 1);
+    border-top: 0px solid rgba(255, 255, 255, 1);
+    border-bottom: 0px solid rgba(255, 255, 255, 1);
+    height:80px;
+}
+
+.header .content-container {
+    margin: 0 20% 0 20%;
+    height:80px;
+}
+
+.not-alone {
+    position:relative;
+    display:inline-block;
+}
+
+.menu {
+    height:100%;
+}
+
+.menubar {
+    margin: 43px 0 10px 20px;
+}
+
+.menubar a {
+    margin: 0 15px 0 10px;
+    text-transform: uppercase;
+    color: #979595;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.menubar a:hover {
+    color: #000;
+}
+
+.menubar a.active {
+    color: #000;
+}
+
+.logo {
+     float:right;
+}
+
+.logo img {
+    height:70px;
+    min-width:120px;
+}
+
+.content-area {
+    margin-top:90px;
+}
+
+.middle-area {
+    margin: 0 20% 0 20%;
+}
+
+.half-area {
+    margin: 10px 20px;
+    width:45%;
+}
+
+.form-custom legend {
+    text-transform:uppercase;
+    font-weight:600;
+    border-bottom: 3px solid rgba(204, 204, 204, 1);
+    border-radius:3px;
+    width:100%;
+
+}
+
+.form-group {
+    width:100%;
+    display:block;
+    margin: 10px 5px 10px 5px;
+}
+
+.form-group label {
+    width:30%;
+    height:30px;
+    margin:5px;
+    display:inline-block;
+    color: #464547;
+}
+
+.form-group input {
+    border-radius:5px;
+    width: 65%;
+    height:30px;
+}
+
+.btn {
+    width:100% !important;
+    margin:15px 0 5px 0;
+    cursor:pointer;
+    background-color: #464547;
+    height:30px;
+    text-transform:uppercase;
+    border: 0 none;
+}
+
+.btn-success {
+    background-color: #A3C644;
+}
+
+.btn-success:hover {
+    background-color: #7F993A;
+}
+
+.btn-info {
+    background-color: #39C2D7;
+}
+
+.btn-info:hover {
+    background-color: #1A9CB0;
+}

@@ -4,22 +4,26 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 /**
  * @author Vladyslav_Yemelianov
  */
 public class UserRegistrationBean {
-    @NotBlank
+    @NotBlank(message = Validation.Msg.NOT_BLANK)
     @Email
     private String email;
-    @NotBlank
-    @Pattern(regexp = "[A-Za-z0-9\\.]{4,50}")
+
+    @NotBlank(message = Validation.Msg.NOT_BLANK)
+    @Size(min = 6, max = 40, message = Validation.Msg.PASSWORD)
     private String password;
-    @NotBlank
-    @Pattern(regexp = Validation.INTERNATIONAL + "{1, 30}")
+
+    @NotBlank(message = Validation.Msg.NOT_BLANK)
+    @Pattern(regexp = Validation.INTERNATIONAL + "{1,30}")
     private String firstName;
-    @NotBlank
-    @Pattern(regexp = Validation.INTERNATIONAL + "{1, 30}")
+
+    @NotBlank(message = Validation.Msg.NOT_BLANK)
+    @Pattern(regexp = Validation.INTERNATIONAL + "{1,30}")
     private String lastName;
 
     public String getEmail() {
