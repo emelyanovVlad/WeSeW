@@ -32,18 +32,22 @@
                         <div class="form-group">
                             <label for="joinEmail">Email</label>
                             <input id="joinEmail" name="email" type="text">
+                            <ctag:err key="email"/>
                         </div>
                         <div class="form-group">
-                            <label>Password</label>
+                            <label for="joinPass">Password</label>
                             <input id="joinPass" name="password" type="password">
+                            <ctag:err key="password"/>
                         </div>
                         <div class="form-group">
-                            <label>First name</label>
+                            <label for="joinFname">First name</label>
                             <input id="joinFname" name="firstName" type="text">
+                            <ctag:err key="firstName"/>
                         </div>
                         <div class="form-group">
-                            <label>Last name</label>
+                            <label for="joinLname">Last name</label>
                             <input id="joinLname" name="lastName" type="text">
+                            <ctag:err key="lastName"/>
                         </div>
                         <div class="form-group">
                             <input class="btn btn-success" type="submit" value="Join">
@@ -59,12 +63,14 @@
                     <fieldset>
                         <legend>Sign in</legend>
                         <div class="form-group">
-                            <label>Email</label>
-                            <input type="text">
+                            <label for="signEmail">Email</label>
+                            <input id="signEmail" name="email" type="text">
+                            <ctag:err key="email"/>
                         </div>
                         <div class="form-group">
-                            <label>Password</label>
-                            <input type="password">
+                            <label for="signPass">Password</label>
+                            <input id="signPass" name="password" type="password">
+                            <ctag:err key="password"/>
                         </div>
                         <div class="form-group">
                             <input class="btn btn-info" type="submit" value="Sign in">

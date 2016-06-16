@@ -104,6 +104,13 @@ fieldset {
     height:30px;
 }
 
+.form-group span {
+    display:block;
+    margin-left:35%;
+    color:#B22746;
+    font-weight:600;
+}
+
 .btn {
     width:100% !important;
     margin:15px 0 5px 0;
