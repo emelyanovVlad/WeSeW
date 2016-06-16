@@ -45,7 +45,9 @@ public class SiteUserController extends AbstractWebController {
             return joinModel;
         }
         SiteUser siteUser = userService.create(userBean);
-        LOGGER.debug(siteUser.toString() + " joined to site.");
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(siteUser.toString() + " joined to site.");
+        }
         joinModel.setViewName(WebUtil.redirect(WebUtil.View.HOME));
         return joinModel;
     }

@@ -59,7 +59,7 @@
 
         <div class="half-area not-alone">
             <div class="form">
-                <form class="form-custom" method="POST">
+                <form class="form-custom" action="/signin" method="POST">
                     <fieldset>
                         <legend>Sign in</legend>
                         <div class="form-group">

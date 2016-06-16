@@ -8,4 +8,6 @@ import com.we.sew.site.core.model.SiteUser;
  */
 public interface ISiteUserService {
     SiteUser create(UserRegistrationBean bean);
+
+    SiteUser findByEmail(String email);
 }

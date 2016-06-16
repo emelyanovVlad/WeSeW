@@ -44,4 +44,9 @@ public class SiteUserService implements ISiteUserService {
         LOGGER.debug(adaptedUser.toString() + " was created");
         return savedUser;
     }
+
+    @Override
+    public SiteUser findByEmail(String email) {
+        return null;
+    }
 }

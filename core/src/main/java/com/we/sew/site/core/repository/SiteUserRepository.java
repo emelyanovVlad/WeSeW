@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface SiteUserRepository extends JpaRepository<SiteUser, String> {
+    SiteUser findOneByEmail(String email);
 }
