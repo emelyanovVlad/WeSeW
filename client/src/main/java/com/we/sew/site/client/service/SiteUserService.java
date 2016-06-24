@@ -1,6 +1,6 @@
 package com.we.sew.site.client.service;
 
-import com.we.sew.site.client.bean.UserRegistrationBean;
+import com.we.sew.site.client.bean.UserRegistrationModel;
 import com.we.sew.site.client.service.api.ISiteUserService;
 import com.we.sew.site.client.service.api.IUserRoleService;
 import com.we.sew.site.client.util.ActiveRoles;
@@ -33,7 +33,7 @@ public class SiteUserService implements ISiteUserService {
     private CreationTimeEntityInfoFiller creationTimeEntityInfoFiller;
 
     @Override
-    public SiteUser create(UserRegistrationBean bean) {
+    public SiteUser create(UserRegistrationModel bean) {
         SiteUser adaptedUser = userAdapter.adapt(bean);
         creationTimeEntityInfoFiller.fill(adaptedUser);
         UserRole clientRole = userRoleService.findByName(ActiveRoles.CLIENT.toString());
@@ -47,6 +47,6 @@ public class SiteUserService implements ISiteUserService {
 
     @Override
     public SiteUser findByEmail(String email) {
-        return null;
+        return repository.findOneByEmail(email);
     }
 }

@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 /**
  * @author Vladyslav_Yemelianov
  */
-public class UserRegistrationBean {
+public class UserRegistrationModel {
     @NotBlank(message = Validation.Msg.NOT_BLANK)
     @Pattern(regexp = Validation.EMAIL, message = Validation.Msg.EMAIL)
     private String email;

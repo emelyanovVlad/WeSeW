@@ -14,7 +14,7 @@ public class SiteUser extends StatusedEntity {
     @Id
     @Column(name = Core.SiteUser.ID, nullable = false)
     private String id;
-    @Column(name = Core.SiteUser.EMAIL, nullable = false, unique = false)
+    @Column(name = Core.SiteUser.EMAIL, nullable = false, unique = true)
     private String email;
     @Column(name = Core.SiteUser.PASSWORD, nullable = false)
     private String password;

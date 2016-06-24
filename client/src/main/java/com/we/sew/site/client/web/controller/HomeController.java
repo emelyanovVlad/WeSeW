@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 
-    @RequestMapping(value = {WebUtil.Mapping.ROOT, WebUtil.Mapping.HOME}, method = RequestMethod.GET)
-    public String home() {
-
-        return WebUtil.View.HOME;
-    }
+	@RequestMapping(value = {WebUtil.Mapping.ROOT, WebUtil.Mapping.HOME}, method = RequestMethod.GET)
+	public String home() {
+		return WebUtil.View.HOME;
+	}
 }

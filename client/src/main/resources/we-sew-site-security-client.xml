@@ -13,7 +13,7 @@
     <security:http auto-config="true">
         <security:intercept-url pattern="/join" access="permitAll()"/>
         <security:intercept-url pattern="/logout" access="permitAll()"/>
-        <security:intercept-url pattern="/**" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/profile/**" access="isAuthenticated()"/>
         <security:form-login login-page="/join"
                              login-processing-url="/signin"
                              username-parameter="email"

@@ -1,6 +1,6 @@
 package com.we.sew.site.client.web.controller;
 
-import com.we.sew.site.client.bean.UserRegistrationBean;
+import com.we.sew.site.client.bean.UserRegistrationModel;
 import com.we.sew.site.client.service.api.ISiteUserService;
 import com.we.sew.site.client.web.WebUtil;
 import com.we.sew.site.client.web.controller.api.AbstractWebController;
@@ -35,16 +35,22 @@ public class SiteUserController extends AbstractWebController {
     }
 
     @RequestMapping(value = WebUtil.Mapping.JOIN, method = RequestMethod.POST)
-    public ModelAndView join(@Valid UserRegistrationBean userBean, BindingResult result) {
+    public ModelAndView join(@Valid UserRegistrationModel userModel, BindingResult result) {
         ModelAndView joinModel = new ModelAndView();
         if (result.hasErrors()) {
             joinModel.setViewName(WebUtil.View.JOIN);
             Map<String, String> errors = getErrorsFrom(result);
             joinModel.addObject(WebUtil.Consts.ERRORS, errors);
-
             return joinModel;
         }
-        SiteUser siteUser = userService.create(userBean);
+		SiteUser userWithEmail = userService.findByEmail(userModel.getEmail());
+		if (userWithEmail != null) {
+			joinModel.setViewName(WebUtil.View.JOIN);
+			joinModel.addObject(WebUtil.Consts.ERROR, "Email already exists");
+			return joinModel;
+		}
+
+		SiteUser siteUser = userService.create(userModel);
         if (LOGGER.isDebugEnabled()) {
             LOGGER.debug(siteUser.toString() + " joined to site.");
         }

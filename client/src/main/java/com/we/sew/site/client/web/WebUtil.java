@@ -22,6 +22,7 @@ public class WebUtil {
     }
 
     public static class Consts {
+		public static final String ERROR = "error";
         public static final String ERRORS = "errors";
         public static final String LOGGED_USER = "logged_user";
     }
