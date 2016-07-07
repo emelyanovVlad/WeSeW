@@ -117,7 +117,15 @@ public class SiteUser extends StatusedEntity {
         this.cellNumber = cellNumber;
     }
 
-    @Override
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

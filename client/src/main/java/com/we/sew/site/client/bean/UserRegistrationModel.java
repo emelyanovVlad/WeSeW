@@ -1,5 +1,6 @@
 package com.we.sew.site.client.bean;
 
+import com.we.sew.site.client.web.validation.EmailExist;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.Pattern;
@@ -11,6 +12,7 @@ import javax.validation.constraints.Size;
 public class UserRegistrationModel {
     @NotBlank(message = Validation.Msg.NOT_BLANK)
     @Pattern(regexp = Validation.EMAIL, message = Validation.Msg.EMAIL)
+	@EmailExist
     private String email;
 
     @NotBlank(message = Validation.Msg.NOT_BLANK)

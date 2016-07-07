@@ -1,7 +1,7 @@
 package com.we.sew.site.client.service;
 
 import com.we.sew.site.client.bean.UserRegistrationModel;
-import com.we.sew.site.client.service.api.ISiteUserService;
+import com.we.sew.site.client.service.api.ISiteUserManager;
 import com.we.sew.site.client.service.api.IUserRoleService;
 import com.we.sew.site.client.util.ActiveRoles;
 import com.we.sew.site.client.util.adapter.SiteUserAdapter;
@@ -20,8 +20,8 @@ import java.util.UUID;
  * @author Vladyslav_Yemelianov
  */
 @Service
-public class SiteUserService implements ISiteUserService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(SiteUserService.class);
+public class SiteUserManager implements ISiteUserManager {
+    private static final Logger LOGGER = LoggerFactory.getLogger(SiteUserManager.class);
 
     @Autowired
     private SiteUserRepository repository;

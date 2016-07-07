@@ -1,6 +1,6 @@
 package com.we.sew.site.client.web.controller;
 
-import com.we.sew.site.client.service.api.ISiteUserService;
+import com.we.sew.site.client.service.api.ISiteUserManager;
 import com.we.sew.site.client.web.WebUtil;
 import com.we.sew.site.core.model.SiteUser;
 import org.slf4j.Logger;
@@ -21,7 +21,7 @@ public class SessionController {
     private static final Logger LOGGER = LoggerFactory.getLogger(SessionController.class);
 
     @Autowired
-    private ISiteUserService userService;
+    private ISiteUserManager userService;
 
     @RequestMapping(value = WebUtil.Mapping.AUTH, method = RequestMethod.GET)
     public String saveUser(HttpSession session, Principal principal) {

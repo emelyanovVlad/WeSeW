@@ -12,12 +12,5 @@ import java.util.Map;
  */
 public abstract class AbstractWebController {
 
-    protected Map<String, String> getErrorsFrom(BindingResult result) {
-        Map<String, String> errors = new HashMap<>();
-        for (ObjectError error : result.getAllErrors()) {
-            FieldError fieldError = (FieldError) error;
-            errors.put(fieldError.getField(), fieldError.getDefaultMessage());
-        }
-        return errors;
-    }
+
 }
