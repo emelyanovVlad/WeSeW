@@ -1,6 +1,7 @@
 package com.we.sew.site.core.model;
 
 import com.we.sew.site.core.Core;
+import com.we.sew.site.core.model.abs.TimeEntityInfo;
 
 import javax.persistence.*;
 
@@ -9,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = Core.Address.TABLE_NAME)
-public class Address {
+public class Address extends TimeEntityInfo {
     @Id
     @Column(name = Core.Address.ID)
     @GeneratedValue(strategy = GenerationType.IDENTITY)

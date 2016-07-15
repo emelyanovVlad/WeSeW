@@ -29,7 +29,7 @@ public class Core {
     public static class Country {
         public static final String TABLE_NAME = "country";
         public static final String ID = "id_country";
-        public static final String FULL_NAME = "full_name";
+        public static final String TITLE = "title";
         public static final String ABR = "abr";
         public static final String LOGO_PATH = "logo_path";
     }

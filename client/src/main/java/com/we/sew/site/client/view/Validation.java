@@ -1,4 +1,4 @@
-package com.we.sew.site.client.bean;
+package com.we.sew.site.client.view;
 
 /**
  * @author Vladyslav_Yemelianov

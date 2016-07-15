@@ -1,6 +1,6 @@
 package com.we.sew.site.client.web.controller;
 
-import com.we.sew.site.client.bean.UserRegistrationModel;
+import com.we.sew.site.client.view.command.SiteUserRegistrationCommand;
 import com.we.sew.site.client.service.api.ISiteUserManager;
 import com.we.sew.site.client.web.WebUtil;
 import com.we.sew.site.client.web.controller.api.AbstractWebController;
@@ -35,7 +35,7 @@ public class SiteUserController extends AbstractWebController {
     }
 
     @RequestMapping(value = WebUtil.Mapping.JOIN, method = RequestMethod.POST)
-    public ModelAndView join(@Valid UserRegistrationModel userModel, BindingResult result) {
+    public ModelAndView join(@Valid SiteUserRegistrationCommand userModel, BindingResult result) {
         if (result.hasErrors()) {
             return ModelViewBuilder.error(WebUtil.View.JOIN, result);
         }

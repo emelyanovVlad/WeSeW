@@ -2,6 +2,7 @@ package com.we.sew.site.core.model;
 
 import com.we.sew.site.core.Core;
 import com.we.sew.site.core.model.abs.StatusedEntity;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
@@ -12,6 +13,8 @@ import javax.persistence.*;
 @Table(name = Core.SiteUser.TABLE_NAME)
 public class SiteUser extends StatusedEntity {
     @Id
+	@GeneratedValue(generator = "uuid")
+	@GenericGenerator(name = "uuid", strategy = "uuid2")
     @Column(name = Core.SiteUser.ID, nullable = false)
     private String id;
     @Column(name = Core.SiteUser.EMAIL, nullable = false, unique = true)

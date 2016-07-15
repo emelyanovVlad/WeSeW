@@ -1,6 +1,6 @@
 package com.we.sew.site.client.service;
 
-import com.we.sew.site.client.bean.UserRegistrationModel;
+import com.we.sew.site.client.view.command.SiteUserRegistrationCommand;
 import com.we.sew.site.client.service.api.ISiteUserManager;
 import com.we.sew.site.client.service.api.IUserRoleService;
 import com.we.sew.site.client.util.ActiveRoles;
@@ -33,12 +33,11 @@ public class SiteUserManager implements ISiteUserManager {
     private CreationTimeEntityInfoFiller creationTimeEntityInfoFiller;
 
     @Override
-    public SiteUser create(UserRegistrationModel bean) {
+    public SiteUser create(SiteUserRegistrationCommand bean) {
         SiteUser adaptedUser = userAdapter.adapt(bean);
         creationTimeEntityInfoFiller.fill(adaptedUser);
         UserRole clientRole = userRoleService.findByName(ActiveRoles.CLIENT.toString());
         adaptedUser.setUserRole(clientRole);
-        adaptedUser.setId(UUID.randomUUID().toString());
 
         SiteUser savedUser = repository.save(adaptedUser);
         LOGGER.debug(adaptedUser.toString() + " was created");
