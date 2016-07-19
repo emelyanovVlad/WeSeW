@@ -5,6 +5,6 @@ import com.we.sew.site.core.model.UserRole;
 /**
  * @author Vladyslav_Yemelianov
  */
-public interface IUserRoleService {
+public interface IUserRoleManager {
     UserRole findByName(String name);
 }

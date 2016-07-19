@@ -50,7 +50,7 @@ public class Core {
         public static final String LAST_NAME = "last_name";
         public static final String BIRTH_DATE = "birth_date";
         public static final String LAST_LOGIN = "last_login";
-        public static final String ROLE_ID = "id_role";
+        public static final String ROLE_ID = "id_user_role";
         public static final String ADDRESS_ID = "id_address";
         public static final String CELL_NUMBER = "cell_number";
         public static final String GENDER = "gender";

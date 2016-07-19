@@ -16,7 +16,7 @@ public class ApplicationConfig {
 	@Autowired
 	private DataSource dataSource;
 
-	@Bean
+	@Bean(initMethod = "migrate")
 	public Flyway flyway() {
 		Flyway flyway = new Flyway();
 		flyway.setDataSource(dataSource);
