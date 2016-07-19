@@ -14,7 +14,7 @@
             <div class="menubar">
                 <a href="/home">Home</a>
                 <a>gallery</a>
-                <a href="/join" class="active">join</a>
+                <ctag:join active="true"/>
             </div>
         </div>
         <div class="logo not-alone">

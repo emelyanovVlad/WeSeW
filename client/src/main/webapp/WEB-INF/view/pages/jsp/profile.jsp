@@ -12,9 +12,9 @@
     <div class="content-container">
         <div class="menu not-alone">
             <div class="menubar">
-                <a class="active">Home</a>
+                <a>Home</a>
                 <a>gallery</a>
-                <ctag:join/>
+                <ctag:join active="true"/>
             </div>
         </div>
         <div class="logo not-alone">

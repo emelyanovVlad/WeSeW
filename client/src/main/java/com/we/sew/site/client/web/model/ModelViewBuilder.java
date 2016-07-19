@@ -15,16 +15,13 @@ import java.util.Map;
 public class ModelViewBuilder {
 
 	public static ModelAndView error(String view, String error) {
-		ModelAndView model = createModel();
-		model.setViewName(view);
-
+		ModelAndView model = createModel(view);
 		model.addObject(WebUtil.Consts.ERROR, error);
 		return model;
 	}
 
 	public static ModelAndView error(String view, Errors errors) {
 		ModelAndView model = createModel();
-
 		model.setViewName(view);
 		Map<String, String> convertedErrors = getErrorsFrom(errors);
 		model.addObject(WebUtil.Consts.ERRORS, convertedErrors);
@@ -32,8 +29,12 @@ public class ModelViewBuilder {
 	}
 
 	public static ModelAndView success(String redirectUrl) {
-		ModelAndView model = createModel();
-		model.setViewName(WebUtil.redirect(redirectUrl));
+		return createModel(WebUtil.redirect(redirectUrl));
+	}
+
+	public static ModelAndView success(String view, Object obj) {
+		ModelAndView model = createModel(view);
+		model.addObject(WebUtil.Consts.DATAOBJ, obj);
 		return model;
 	}
 
@@ -48,5 +49,9 @@ public class ModelViewBuilder {
 
 	private static ModelAndView createModel() {
 		return new ModelAndView();
+	}
+
+	private static ModelAndView createModel(String viewName) {
+		return new ModelAndView(viewName);
 	}
 }
