@@ -24,7 +24,7 @@
 </div>
 <section class="content-area">
     <div class="middle-area">
-        <div class="half-area not-alone">
+        <div class="half-area not-alone go-top">
             <div class="form">
                 <form class="form-custom" action="/join" method="POST">
                     <fieldset>
@@ -57,9 +57,9 @@
             </div>
         </div>
 
-        <div class="half-area not-alone">
+        <div class="half-area not-alone go-top">
             <div class="form">
-                <form class="form-custom" action="/signin" method="POST">
+                <form class="form-custom " action="/signin" method="POST">
                     <fieldset>
                         <legend>Sign in</legend>
                         <div class="form-group">

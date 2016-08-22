@@ -29,6 +29,10 @@ fieldset {
     display:inline-block;
 }
 
+.go-top {
+    vertical-align: top;
+}
+
 .menu {
     height:100%;
 }
@@ -135,4 +139,49 @@ fieldset {
 
 .btn-info:hover {
     background-color: #1A9CB0;
+}
+
+.profile {
+
+}
+
+.profile-data {
+    display: block;
+    width:100%;
+    margin: 10px 0;
+}
+
+.profile-personal {
+    vertical-align: top;
+}
+
+.profile-avatar {
+    text-align: center;
+}
+
+.profile-avatar img {
+    border: thick solid #fff;
+    border-radius: 50%;
+    width:300px;
+    margin: 5px;
+}
+
+.profile-avatar img:hover {
+    border-color: #6197cc;
+    cursor:pointer;
+}
+
+.row-data {
+    display: block;
+    margin: 15px 0;
+}
+
+.row-data div.title {
+    width:120px;
+    color: #464547;
+    position:relative;
+    display:inline-block;
+}
+
+.row-data span.content {
 }

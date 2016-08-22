@@ -28,7 +28,7 @@ public class WebUtil {
     public static class Consts {
 		public static final String ERROR = "error";
         public static final String ERRORS = "errors";
-		public static final String DATA_OBJ = "data_obj";
+		public static final String DATA_OBJ = "dataObj";
 		public static final String LOGGED = "logged";
 		public static final String LOGGED_USER = "logged_user";
     }
