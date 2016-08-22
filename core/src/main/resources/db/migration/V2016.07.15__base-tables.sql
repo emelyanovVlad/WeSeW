@@ -28,6 +28,8 @@ CREATE TABLE `address` (
   `id_address`                BIGINT(20)        NOT NULL  UNIQUE,
   `address`                   VARCHAR(255)      NOT NULL,
   `id_country`                INT(11)           NOT NULL,
+  `creation_time`             BIGINT(20)        NOT NULL,
+  `update_time`               BIGINT(20)        NULL,
   PRIMARY KEY (`id_address`),
   FOREIGN KEY (`id_country`)  REFERENCES        country         (`id_country`)
 ) DEFAULT CHARSET=utf8;

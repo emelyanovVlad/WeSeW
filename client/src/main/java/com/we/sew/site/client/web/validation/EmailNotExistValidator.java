@@ -8,7 +8,7 @@ import javax.validation.ConstraintValidatorContext;
 /**
  * @author vladyslav
  */
-public class EmailExistValidator extends AbstractBaseValidator<EmailExist, String> {
+public class EmailNotExistValidator extends AbstractBaseValidator<EmailNotExist, String> {
 	@Autowired
 	private ISiteUserManager userService;
 

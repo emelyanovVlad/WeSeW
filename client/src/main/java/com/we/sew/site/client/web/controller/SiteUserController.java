@@ -3,7 +3,6 @@ package com.we.sew.site.client.web.controller;
 import com.we.sew.site.client.view.command.SiteUserRegistrationCommand;
 import com.we.sew.site.client.service.api.ISiteUserManager;
 import com.we.sew.site.client.web.WebUtil;
-import com.we.sew.site.client.web.controller.api.AbstractWebController;
 import com.we.sew.site.client.web.model.ModelViewBuilder;
 import com.we.sew.site.core.model.SiteUser;
 import org.slf4j.Logger;
@@ -23,7 +22,7 @@ import javax.validation.Valid;
  */
 @Controller
 @Validated
-public class SiteUserController extends AbstractWebController {
+public class SiteUserController {
     private static final Logger LOGGER = LoggerFactory.getLogger(SiteUserController.class);
 
     @Autowired

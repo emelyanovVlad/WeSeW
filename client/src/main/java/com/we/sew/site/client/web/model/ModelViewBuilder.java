@@ -34,7 +34,7 @@ public class ModelViewBuilder {
 
 	public static ModelAndView success(String view, Object obj) {
 		ModelAndView model = createModel(view);
-		model.addObject(WebUtil.Consts.DATAOBJ, obj);
+		model.addObject(WebUtil.Consts.DATA_OBJ, obj);
 		return model;
 	}
 

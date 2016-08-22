@@ -9,5 +9,9 @@ import com.we.sew.site.core.model.SiteUser;
 public interface ISiteUserManager {
     SiteUser create(SiteUserRegistrationCommand bean);
 
+	SiteUser check(String email, String password);
+
     SiteUser findByEmail(String email);
+
+	SiteUser findById(String id);
 }

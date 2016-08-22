@@ -3,7 +3,7 @@
 <%@ attribute name="active" required="false" type="java.lang.Boolean" %>
 
 <c:choose>
-    <c:when test="${sessionScope.logged_user}">
+    <c:when test="${sessionScope.logged}">
         <a href="/profile" <c:if test="${active}"> class="active"</c:if>>profile</a>
     </c:when>
 
