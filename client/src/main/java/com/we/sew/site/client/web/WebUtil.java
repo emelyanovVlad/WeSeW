@@ -4,6 +4,7 @@ package com.we.sew.site.client.web;
  * @author Vladyslav_Yemelianov
  */
 public class WebUtil {
+    public static final String JSON = "application/json";
 
     public static String redirect(String url) {
         return "redirect:" + url;
@@ -16,6 +17,8 @@ public class WebUtil {
         public static final String AUTH = "/auth";
         public static final String SIGNIN = "/signin";
 		public static final String PROFILE = "/profile";
+        public static final String LIST = "/list";
+        public static final String USER = "/user";
 		public static final String ID = "/{id}";
     }
 

@@ -19,6 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
+import java.util.List;
+
 /**
  * @author Vladyslav_Yemelianov
  */
@@ -73,4 +75,9 @@ public class SiteUserManager implements ISiteUserManager {
 	public SiteUser findById(String id) {
 		return repository.findOne(id);
 	}
+
+    @Override
+    public List<SiteUser> findAll() {
+        return repository.findAll();
+    }
 }

@@ -6,5 +6,5 @@ package com.we.sew.site.client.util;
 public enum EntityStatuses {
 	ACTIVE,
 	DELETED,
-	REGISTERED
+	PENDING
 }

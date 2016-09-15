@@ -61,4 +61,4 @@ INSERT INTO user_role (id_user_role, value_name, creation_time, update_time) VAL
 
 INSERT INTO entity_status (id_entity_status, value_name, creation_time, update_time) VALUE (-1, 'ACTIVE', 0, 0);
 INSERT INTO entity_status (id_entity_status, value_name, creation_time, update_time) VALUE (-2, 'DELETED', 0, 0);
-INSERT INTO entity_status (id_entity_status, value_name, creation_time, update_time) VALUE (-3, 'REGISTERED', 0, 0);
+INSERT INTO entity_status (id_entity_status, value_name, creation_time, update_time) VALUE (-3, 'PENDING', 0, 0);

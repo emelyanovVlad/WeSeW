@@ -50,14 +50,9 @@
                     <div class="title"><span>Living at</span></div>
                     <span class="content">${dataObj.country}, ${dataObj.address}</span>
                 </div>
-                <div class="row-data">
-                    <div class="title"><span>Logged as</span></div>
-                    <span class="content">${dataObj.userRole}</span>
-                </div>
             </div>
             <div class="profile-avatar not-alone half-area">
                 <img src="/clientlibs/img/photo.jpg">
-
             </div>
         </div>
     </div>
