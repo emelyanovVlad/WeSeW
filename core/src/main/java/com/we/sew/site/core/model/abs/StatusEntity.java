@@ -11,9 +11,9 @@ import javax.persistence.MappedSuperclass;
  * @author Vladyslav_Yemelianov
  */
 @MappedSuperclass
-public abstract class StatusedEntity extends TimeEntityInfo {
+public abstract class StatusEntity extends TimeEntityInfo {
     @ManyToOne
-    @JoinColumn(name = Core.StatusedEntity.STATUS_ID)
+    @JoinColumn(name = Core.StatusEntity.STATUS_ID)
     private EntityStatus status;
 
     public EntityStatus getStatus() {
@@ -30,7 +30,7 @@ public abstract class StatusedEntity extends TimeEntityInfo {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
 
-        StatusedEntity that = (StatusedEntity) o;
+        StatusEntity that = (StatusEntity) o;
 
         return status != null ? status.equals(that.status) : that.status == null;
 
@@ -45,7 +45,7 @@ public abstract class StatusedEntity extends TimeEntityInfo {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("StatusedEntity{");
+        final StringBuilder sb = new StringBuilder("StatusEntity{");
         sb.append(super.toString());
         sb.append("status=").append(status);
         sb.append('}');
